@@ -1,0 +1,6 @@
+<odoo>
+    <record id="study_note_demo_1" model="study.note">
+        <field name="name">Read odoo/models.py</field>
+        <field name="description">Look at BaseModel: create, write, search, browse.</field>
+    </record>
+</odoo>

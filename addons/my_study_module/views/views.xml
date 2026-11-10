@@ -1,0 +1,39 @@
+<odoo>
+    <record id="study_note_view_list" model="ir.ui.view">
+        <field name="name">study.note.list</field>
+        <field name="model">study.note</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="date"/>
+                <field name="name"/>
+                <field name="description"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="study_note_view_form" model="ir.ui.view">
+        <field name="name">study.note.form</field>
+        <field name="model">study.note</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="date"/>
+                    </group>
+                    <field name="description" placeholder="Write your note..."/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="study_note_action" model="ir.actions.act_window">
+        <field name="name">Study Notes</field>
+        <field name="res_model">study.note</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="study_note_menu_root" name="Study Notes" sequence="10"/>
+    <menuitem id="study_note_menu_notes" name="Notes"
+              parent="study_note_menu_root" action="study_note_action" sequence="10"/>
+</odoo>
